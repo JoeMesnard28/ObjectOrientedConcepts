@@ -10,13 +10,15 @@ public:
 	Speaker();
 	~Speaker() {}
 
-	bool SetSpeakingStrategy(ISpeakingStrategy* speakingStrategy);
+	bool SetSpeakingStrategy(ISpeakingStrategyPtr_t speakingStrategy);
 	bool Speak(std::string& speech);
 
 private:
-	ISpeakingStrategy* m_SpeakingStrategy;
+	ISpeakingStrategyPtr_t m_SpeakingStrategy;
 
 };
+
+typedef std::shared_ptr<Speaker> SpeakerPtr_t;
 
 
 #endif // SPEAKER_H

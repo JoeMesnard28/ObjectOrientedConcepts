@@ -1,11 +1,12 @@
 #include "Speaker.h"
 
+
 Speaker::Speaker():
 	m_SpeakingStrategy(NULL)
 {
 }
 
-bool Speaker::SetSpeakingStrategy(ISpeakingStrategy * speakingStrategy)
+bool Speaker::SetSpeakingStrategy(ISpeakingStrategyPtr_t speakingStrategy)
 {
 	m_SpeakingStrategy = speakingStrategy;
 	return true;

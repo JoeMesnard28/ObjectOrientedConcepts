@@ -15,4 +15,6 @@ public:
 	virtual bool SpeakWithStrategy(std::string& speech) override;
 };
 
+typedef std::shared_ptr<WhisperStrategy> WhisperStrategyPtr_t;
+
 #endif	// WHISPERSTRATEGY_H
